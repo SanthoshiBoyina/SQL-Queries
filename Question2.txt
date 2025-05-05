@@ -1,0 +1,5 @@
+Show first name and last name of patients who does not have allergies. (null)
+
+select p.first_name, p.last_name
+from patients p
+where p.allergies IS NULL
