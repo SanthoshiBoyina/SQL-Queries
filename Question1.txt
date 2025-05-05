@@ -1,0 +1,5 @@
+Show first name, last name, and gender of patients whose gender is 'M'
+
+select p.first_name, p.last_name, p.gender 
+from patients p
+where p.gender = "M"
