@@ -1,0 +1,7 @@
+Show all allergies ordered by popularity. Remove NULL values from query.
+
+select allergies, count(*) 
+from patients
+group by allergies
+having allergies not null
+order by count(*) desc;
