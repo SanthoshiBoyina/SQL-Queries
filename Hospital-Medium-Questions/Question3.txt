@@ -4,3 +4,7 @@ and is at least 6 characters long.
 select patient_id, first_name 
 from patients
 where first_name like 's%s' and length(first_name) >= 6;
+
+select patient_id, first_name 
+from patients
+where first_name like 's____%s'
