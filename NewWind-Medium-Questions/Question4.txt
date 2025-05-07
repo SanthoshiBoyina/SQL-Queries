@@ -1,0 +1,7 @@
+Show the city, company_name, contact_name from the customers and suppliers table merged together.
+Create a column which contains 'customers' or 'suppliers' depending on the table it came from.
+
+
+select year(order_date) as order_year, Month(order_date) as order_month, count(*)
+from orders
+group by order_month, order_year
