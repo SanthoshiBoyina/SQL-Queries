@@ -1,0 +1,11 @@
+Display a single row with max_visits, min_visits, average_visits where the maximum, minimum and 
+average number of admissions per day is calculated. Average is rounded to 2 decimal places.
+
+
+select 
+max(num_of_visits), min(num_of_visits), round(avg(num_of_visits), 2)
+from (
+	select patient_id, count(admission_date) as num_of_visits
+	from admissions
+	group by admission_date
+)
