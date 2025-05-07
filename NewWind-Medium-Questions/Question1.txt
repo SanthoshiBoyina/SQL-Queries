@@ -1,0 +1,5 @@
+Show the ProductName, CompanyName, CategoryName from the products, suppliers, and categories table
+
+select p.product_name, s.company_name, c.category_name
+from products p, suppliers s, categories c
+where p.supplier_id = s.supplier_id and p.category_id = c.category_id
