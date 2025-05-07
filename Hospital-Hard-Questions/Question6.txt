@@ -1,0 +1,9 @@
+Show the provinces that has more patients identified as 'M' than 'F'. 
+Must only show full province_name
+
+
+select pn.province_name 
+from patients p, province_names pn
+where p.province_id = pn.province_id
+group by pn.province_name
+having sum(gender = 'M') > sum(gender = 'F')
