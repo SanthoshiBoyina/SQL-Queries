@@ -1,0 +1,13 @@
+Show first_name, last_name, and the total number of admissions attended for each doctor.
+
+Every admission has been attended by a doctor.
+
+
+select first_name, last_name, (select count(*) from admissions group by attending_doctor_id having attending_doctor_id = doctor_id)
+from doctors
+
+
+select first_name, last_name, count(*)
+from admissions a, doctors d
+where attending_doctor_id = doctor_id
+group by attending_doctor_id
